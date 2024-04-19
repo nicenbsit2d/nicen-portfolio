@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <script src="./bootstrap.js" defer></script>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <title>Nicen Mendoza</title>
+  </head>
+  <body>
+    <!---navbar--->
+    <nav>
+      <div class="left">
+        <h1>Nicen Mendoza</h1>
+      </div>
+      <div class="right">
+        <button
+          class="btn btn-warning"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop"
+        >
+          Menu
+        </button>
+      </div>
+    </nav>
+    <!---Home--->
+    <section id="home">
+      <div class="intro">
+        <p>Hello everyone, I'am,</p>
+        <h1>Nicen Howell B. Mendoza</h1>
+        <p>This is my Personal Portfolio.</p>
+      </div>
+      <div class="profile">
+        <img src="./images/profile.jpg" alt="Nicen" />
+      </div>
+    </section>
+    <!---About--->
+    <section id="about">
+      <br /><br /><br />
+      <h1>About</h1>
+      <p>
+        Hi, I am Nicen Howell Mendoza, you can call me Nicen. I’m 20 years old,
+        and I’m from Malinta, Los Baños, Laguna. I’m currently a 2nd year
+        college student at Laguna State Polytechnic University-Los Baños
+        (LSPU-LB).
+      </p>
+    </section>
+    <!---pictures--->
+
+    <section id="pic">
+      <br /><br /><br />
+      <h1>Pictures</h1>
+      <div class="pic-lists">
+        <div class="my-pictures">
+          <br />
+          <div id="carousel" class="container-img">
+            <img src="./images/pic1.jpeg" alt="Image 1" />
+            <img src="./images/pic2.jpg" alt="Image 2" />
+            <img src="./images/pic3.jpg" alt="Image 3" />
+            <img src="./images/pic4.jpeg" alt="Image 4" />
+            <img src="./images/pic5.jpeg" alt="Image 5" />
+          </div>
+          <div class="buttons">
+            <button onclick="prev()" class="btn btn-warning">Prev</button>
+            <button onclick="next()" class="btn btn-warning">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---Skill--->
+    <section id="skill">
+      <br /><br /><br />
+      <div class="skil-ttl">
+        <h1>SKill and Knowledge</h1>
+      </div>
+      <br /><br />
+      <div class="layer1">
+        <div>
+          <h1>Programming Languages:</h1>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div>
+          <h1>Database Management:</h1>
+          <ul>
+            <li>Mysql</li>
+          </ul>
+        </div>
+      </div>
+      <div class="layer2">
+        <h1>Operating Systems:</h1>
+        <ul>
+          <li>Windows, Linux</li>
+          <li>Mysql</li>
+        </ul>
+      </div>
+    </section>
+    <!---Contact--->
+    <section id="contact">
+      <div class="cont">
+        <a href="https://www.facebook.com/MENDOZAxNICEN?mibextid=ZbWKwL"
+          ><span><i class="ai-facebook-fill"></i></span>Facebook</a
+        ><br /><br />
+        <a
+          href="https://www.instagram.com/nicen_mendoza?igsh=MWllb3AwcHh5ajFxZQ=="
+          ><span><i class="ai-instagram-fill"></i></span>Instagram</a
+        ><br /><br />
+        <a
+          ><span><i class="ai-phone"></i></span>09288942686</a
+        ><br /><br />
+        <a
+          ><span><i class="ai-google-contained-fill"></i></span
+          >nicenmendoza25@gmail.com</a
+        >
+      </div>
+    </section>
+
+    <!---Bootstrap offcanvas--->
+    <div
+      class="offcanvas offcanvas-top h-50"
+      tabindex="-1"
+      id="offcanvasTop"
+      aria-labelledby="offcanvasTopLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">Basketball 🏀</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <a href="#">Home</a><br />
+        <hr />
+        <a href="#about">About</a><br />
+        <hr />
+        <a href="#pic">Pictures</a><br />
+        <hr />
+        <a href="#skill">Skills and Knowledge</a><br />
+        <hr />
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </body>
+
+  <!---JavaScript--->
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll("#carousel img");
+
+    function showImage(index) {
+      images.forEach((img) => {
+        img.style.display = "none";
+      });
+      images[index].style.display = "block";
+    }
+
+    function prev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    showImage(currentIndex);
+  </script>
+</html>

@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  left: 0;
+}
+
+@font-face {
+  font-family: basketball;
+  src: url(./Basketball.otf);
+}
+
+body {
+  scroll-behavior: smooth;
+}
+nav {
+  background-color: rgb(142, 65, 65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: basketball;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: sticky;
+  top: 0;
+}
+
+.left h1 {
+  font-size: 50px;
+}
+
+#offcanvasTop.offcanvas {
+  text-align: center;
+  font-size: 19px;
+  font-family: basketball;
+  background: rgb(142, 65, 65);
+  color: white;
+}
+.offcanvas-body a {
+  color: white;
+  text-decoration: none;
+}
+
+/* home */
+#home {
+  background-image: url(./images/backgroun2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+}
+.intro {
+  color: white;
+  font-family: basketball;
+}
+.intro p {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgb(142, 65, 65);
+}
+.intro h1 {
+  font-size: 4em;
+  font-weight: 600;
+  text-shadow: 5px 5px 1px rgb(142, 65, 65);
+}
+
+.profile img {
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px 0px rgb(142, 65, 65);
+  height: 300px;
+  width: 300px;
+}
+#about {
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  padding-bottom: 100px;
+}
+
+#about h1 {
+  font-family: basketball;
+  font-size: 70px;
+  font-weight: 300;
+}
+#about p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.title h1 {
+  font-size: 70px;
+  color: white;
+  font-family: basketball;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#pic {
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  font-family: basketball;
+}
+.pic-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pic h1 {
+  font-size: 70px;
+}
+.my-pictures {
+  gap: 20px;
+}
+.container-img img {
+  object-fit: cover;
+  height: 350px;
+  width: 350px;
+  border-radius: 16px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px 0px white;
+  margin-bottom: 20px;
+}
+.buttons {
+  text-align: center;
+  font-family: basketball;
+}
+#skill {
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+}
+#skill h1 {
+  font-family: basketball;
+}
+.skil-ttl h1 {
+  font-size: 70px;
+}
+#skill li {
+  font-size: 20px;
+  font-weight: 600;
+}
+.layer1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.layer1 h1 {
+  font-size: 30px;
+}
+.layer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.layer2 h1 {
+  font-size: 30px;
+}
+
+#contact {
+  background-image: url(./images/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+}
+.cont {
+  background: rgba(142, 65, 65, 0.445);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: yellow;
+  font-family: basketball;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 3px 3px 1px rgb(142, 65, 65);
+}
+
+/* media */
+@media all and (max-width: 550px) {
+  nav {
+    padding: 10px;
+  }
+  .left h1 {
+    font-size: 30px;
+  }
+  #offcanvasTop.offcanvas {
+    font-size: 14px;
+  }
+  #home {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+    gap: 20px;
+  }
+  .intro {
+    text-align: center;
+  }
+  .intro p {
+    font-size: 20px;
+  }
+  .intro h1 {
+    font-size: 2.6em;
+  }
+
+  .profile img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
+  #about {
+    padding-bottom: 0;
+  }
+  #about h1 {
+    font-size: 30px;
+  }
+  #about p {
+    font-size: 15px;
+  }
+  .title h1 {
+    font-size: 30px;
+  }
+  #pic h1 {
+    font-size: 30px;
+  }
+  .container-img img {
+    height: 250px;
+    width: 250px;
+  }
+  .skil-ttl h1 {
+    font-size: 30px;
+  }
+  #skill li {
+    font-size: 15px;
+  }
+
+  .layer1 {
+    flex-direction: column;
+  }
+  .layer2 {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  .layer1 h1 {
+    font-size: 20px;
+  }
+  .layer2 h1 {
+    font-size: 20px;
+  }
+  #contact {
+    padding: 20px;
+  }
+  .cont {
+    padding: 20px;
+  }
+
+  #contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: yellow;
+    font-family: basketball;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 3px 3px 1px rgb(142, 65, 65);
+  }
+}
